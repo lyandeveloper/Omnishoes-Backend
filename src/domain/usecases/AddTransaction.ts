@@ -1,5 +1,5 @@
 import { Billing } from '../entities/Billing';
-import { CreditCard } from '../entities/CreditCard';
+import { Transaction } from '../entities/Transaction';
 import { Customer } from '../entities/Customer';
 import { Item } from '../entities/Item';
 import { Shipping } from '../entities/Shipping';
@@ -17,5 +17,5 @@ export interface AddTransactionModel {
 }
 
 export interface AddTransaction {
-  add(transaction: AddTransactionModel): Promise<CreditCard>;
+  add(transaction: AddTransactionModel): Promise<Transaction>;
 }
