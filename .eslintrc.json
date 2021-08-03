@@ -20,6 +20,10 @@
     "rules": {
         "camelcase": "off",
         "import/no-unresolved": "off",
-        "import/extensions": "off"
+        "import/extensions": "off",
+        "import/prefer-default-export":"off",
+        "class-methods-use-this": "off",
+        "no-restricted-syntax": "off",
+        "consistent-return": "off"
     }
 }
