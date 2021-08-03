@@ -2,9 +2,15 @@ import { MissingParamError } from '../../errors';
 import { badRequest } from '../../helper/http-helper';
 import { AddTransactionController } from './add-transaction';
 
+const makeSut = () => {
+  const sut = new AddTransactionController();
+
+  return { sut };
+};
+
 describe('Add Transaction', () => {
-  test('Should return a error if amount field is missing', async () => {
-    const sut = new AddTransactionController();
+  test('Should return 400 if amount field is missing', async () => {
+    const { sut } = makeSut();
     const httpRequest = {
       body: {
         card_number: '4111111111111111',
@@ -75,8 +81,8 @@ describe('Add Transaction', () => {
     expect(httpResponse).toEqual(badRequest(new MissingParamError('amount')));
   });
 
-  test('Should return a error if card_number field is missing', async () => {
-    const sut = new AddTransactionController();
+  test('Should return 400 if card_number field is missing', async () => {
+    const { sut } = makeSut();
     const httpRequest = {
       body: {
         amount: 21000,
@@ -147,8 +153,8 @@ describe('Add Transaction', () => {
     expect(httpResponse).toEqual(badRequest(new MissingParamError('card_number')));
   });
 
-  test('Should return a error if card_cvv field is missing', async () => {
-    const sut = new AddTransactionController();
+  test('Should return 400 if card_cvv field is missing', async () => {
+    const { sut } = makeSut();
     const httpRequest = {
       body: {
         amount: 21000,
@@ -219,8 +225,8 @@ describe('Add Transaction', () => {
     expect(httpResponse).toEqual(badRequest(new MissingParamError('card_cvv')));
   });
 
-  test('Should return a error if card_expiration_date field is missing', async () => {
-    const sut = new AddTransactionController();
+  test('Should return 400 if card_expiration_date field is missing', async () => {
+    const { sut } = makeSut();
     const httpRequest = {
       body: {
         amount: 21000,
@@ -291,8 +297,8 @@ describe('Add Transaction', () => {
     expect(httpResponse).toEqual(badRequest(new MissingParamError('card_expiration_date')));
   });
 
-  test('Should return a error if card_holder_name field is missing', async () => {
-    const sut = new AddTransactionController();
+  test('Should return 400 if card_holder_name field is missing', async () => {
+    const { sut } = makeSut();
     const httpRequest = {
       body: {
         amount: 21000,
@@ -363,8 +369,8 @@ describe('Add Transaction', () => {
     expect(httpResponse).toEqual(badRequest(new MissingParamError('card_holder_name')));
   });
 
-  test('Should return a error if client field is missing', async () => {
-    const sut = new AddTransactionController();
+  test('Should return 400 if client field is missing', async () => {
+    const { sut } = makeSut();
     const httpRequest = {
       body: {
         amount: 21000,
@@ -421,8 +427,8 @@ describe('Add Transaction', () => {
     expect(httpResponse).toEqual(badRequest(new MissingParamError('customer')));
   });
 
-  test('Should return a error if billing field is missing', async () => {
-    const sut = new AddTransactionController();
+  test('Should return 400 if billing field is missing', async () => {
+    const { sut } = makeSut();
     const httpRequest = {
       body: {
         amount: 21000,
@@ -482,8 +488,8 @@ describe('Add Transaction', () => {
     expect(httpResponse).toEqual(badRequest(new MissingParamError('billing')));
   });
 
-  test('Should return a error if shipping field is missing', async () => {
-    const sut = new AddTransactionController();
+  test('Should return 400 if shipping field is missing', async () => {
+    const { sut } = makeSut();
     const httpRequest = {
       body: {
         amount: 21000,
@@ -540,8 +546,8 @@ describe('Add Transaction', () => {
     expect(httpResponse).toEqual(badRequest(new MissingParamError('shipping')));
   });
 
-  test('Should return a error if amount field is missing', async () => {
-    const sut = new AddTransactionController();
+  test('Should return 400 if amount field is missing', async () => {
+    const { sut } = makeSut();
     const httpRequest = {
       body: {
         amount: 21000,
