@@ -7,7 +7,7 @@ export class AddTransactionController implements Controller {
   async handle(httpRequest: HttpRequest): Promise<HttpResponse> {
     try {
       const requiredFields = [
-        'ammount',
+        'amount',
         'card_number',
         'card_cvv',
         'card_expiration_date',
