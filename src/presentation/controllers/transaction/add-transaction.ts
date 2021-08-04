@@ -1,7 +1,7 @@
 import { AddTransaction } from '../../../domain/usecases/AddTransaction';
 import { MissingParamError } from '../../errors';
 import { ServerError } from '../../errors/server-error';
-import { badRequest, serverError } from '../../helper/http-helper';
+import { badRequest, serverError, success } from '../../helper/http-helper';
 import { Controller } from '../../protocols/controller';
 import { HttpRequest, HttpResponse } from '../../protocols/http';
 
@@ -44,7 +44,7 @@ export class AddTransactionController implements Controller {
         item,
       } = httpRequest.body;
 
-      await this.addTransaction.add({
+      const transaction = await this.addTransaction.add({
         amount,
         card_number,
         card_cvv,
@@ -55,6 +55,8 @@ export class AddTransactionController implements Controller {
         shipping,
         item,
       });
+
+      return success(transaction);
     } catch (error) {
       return serverError(new ServerError());
     }
