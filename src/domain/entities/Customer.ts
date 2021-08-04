@@ -1,3 +1,5 @@
+import { Documents } from './Documents';
+
 export interface Customer {
   name: string;
   email: string;
@@ -6,5 +8,5 @@ export interface Customer {
   country: string;
   birthday?: string;
   phone_numbers: string[];
-  documents?: Document[];
+  documents?: Documents[];
 }
