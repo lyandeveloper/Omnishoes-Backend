@@ -247,4 +247,10 @@ describe('AddTransactionRepo', () => {
     const promise = sut.add(makeFakeRequest());
     expect(promise).rejects.toThrow();
   });
+
+  test('Should return an transaction on success', async () => {
+    const { sut } = makeSut();
+    const account = await sut.add(makeFakeRequest());
+    expect(account).toEqual(makeFakeResponse());
+  });
 });
