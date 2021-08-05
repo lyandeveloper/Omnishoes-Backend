@@ -3348,6 +3348,11 @@ p-try@^2.0.0:
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
   integrity sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
 
+pagarme@^4.19.2:
+  version "4.19.2"
+  resolved "https://registry.yarnpkg.com/pagarme/-/pagarme-4.19.2.tgz#87431d6df8d7d57677a780c01b8b5e1bd96f9caf"
+  integrity sha512-/2LBIYW4L4oixhVV1SFbqU2H5Pj4/Iu84dV1/r8JMOLfz0gcyUJiOo+PIJ1UotW70K+MB7aqyGKY8TgADOUC/g==
+
 parent-module@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/parent-module/-/parent-module-1.0.1.tgz#691d2709e78c79fae3a156622452d00762caaaa2"
