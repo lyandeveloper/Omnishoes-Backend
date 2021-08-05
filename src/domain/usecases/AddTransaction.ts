@@ -13,7 +13,7 @@ export interface AddTransactionModel {
   customer: Customer;
   billing: Billing;
   shipping: Shipping;
-  item: Item[];
+  items: Item[];
 }
 
 export interface AddTransaction {

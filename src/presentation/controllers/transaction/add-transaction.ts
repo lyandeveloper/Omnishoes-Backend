@@ -41,7 +41,7 @@ export class AddTransactionController implements Controller {
         customer,
         billing,
         shipping,
-        item,
+        items,
       } = httpRequest.body;
 
       const transaction = await this.addTransaction.add({
@@ -53,7 +53,7 @@ export class AddTransactionController implements Controller {
         customer,
         billing,
         shipping,
-        item,
+        items,
       });
 
       return success(transaction);
