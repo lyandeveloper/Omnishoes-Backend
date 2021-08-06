@@ -9,6 +9,7 @@
     "test:integration": "yarn jest --passWithNoTests --silent --noStackTrace --runInBand --watch -c jest-integration-config.js",
     "test:verbose": "jest --passWithNoTests",
     "test:staged": "yarn test --passWithNoTests",
+    "test:ci": "jest --passWithNoTests --silent --noStackTrace --runInBand --coverage",
     "start": "node ./src/main/server.ts",
     "dev": "ts-node src/main/server.ts"
   },
