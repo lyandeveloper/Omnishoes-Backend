@@ -44,7 +44,7 @@ This project was developed with the following technologies:
 - [Postgres](https://www.postgresql.org/)
 - [TypeORM](https://typeorm.io/)
 - [Jest](https://jestjs.io/pt-BR/)
-- [Pagarme API] (https://pagar.me/)
+- [Pagarme API](https://pagar.me/)
 
 ## Features
 
@@ -53,7 +53,7 @@ This project was developed with the following technologies:
 
 ## How to run
 
-To install dependecies:
+To install dependencies:
 
 ```sh
 yarn install or npm install
@@ -65,7 +65,7 @@ To start server:
 yarn dev or npm run dev
 ```
 
-##Tests
+## Tests
 To run integration tests:
 
 ```sh
